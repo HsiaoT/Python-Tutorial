@@ -46,3 +46,26 @@ np2 = np1.reshape([2,3])
 print(np2)
 print(np2.sum(axis=1))  # 橫向
 print(np2.sum(axis=0))  # 縱向
+
+print("\n========\n")
+# arange
+np.arange(3)
+np.arange(1,3,0.3)
+np.arange(1,12,2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
