@@ -68,7 +68,7 @@ class DetectionLayer(nn.Module):
         self.anchors = anchors
 
 # PyTorch has pre-built layers: Convolutional and Upsample
-# we will have to write Shortcut, Route, YOLO
+# we will have to write Shortcut, Route, YOLO layers
 def create_modules(blocks):
   net_info = blocks[0]
   module_list = nn.ModuleList()
