@@ -49,23 +49,7 @@ print(np2.sum(axis=0))  # 縱向
 
 print("\n========\n")
 # arange
-np.arange(3)
-np.arange(1,3,0.3)
-np.arange(1,12,2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(np.arange(3))
+print(np.arange(1,3,0.3))
+# print(range(1,3,0.3))     # TypeError: range() integer step argument expected, got float.
+print(np.arange(1,12,2))

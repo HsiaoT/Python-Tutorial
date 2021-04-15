@@ -11,8 +11,8 @@ import torch.nn.functional as F
 import torch
 
 batch_size = 2
-one_hot_size = 10
-sequence_width = 7
+one_hot_size = 10          # word vector size
+sequence_width = 7         # sequence size
 data = torch.randn(batch_size, one_hot_size, sequence_width)
 
 conv1 = nn.Conv1d(in_channels=one_hot_size, out_channels=16, kernel_size=3)
@@ -23,14 +23,14 @@ intermediate1 = conv1(data)
 intermediate2 = conv2(intermediate1)
 intermediate3 = conv3(intermediate2)
 
-print(data.size())
-print(intermediate1.size())
-print(intermediate2.size())
-print(intermediate3.size())
+print(data.size())              # [2, 10, 7]
+print(intermediate1.size())     # [2, 16, 5]
+print(intermediate2.size())     # [2, 32, 3]
+print(intermediate3.size())     # [2, 64, 1]
 
 # Returns a tensor with all the dimensions of input of size 1 removed.
-y_output = intermediate3.squeeze()  
-print(y_output.size())
+y_output = intermediate3.squeeze()
+print(y_output.size())          # [2, 64]
 
 print("=====================\n")
 
