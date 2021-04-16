@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# refer to https://rowantseng.medium.com/%E4%BD%BF%E7%94%A8-pytorch-%E6%8F%90%E4%BE%9B%E7%9A%84%E9%A0%90%E8%A8%93%E7%B7%B4%E6%A8%A1%E5%9E%8B-pretrained-model-%E5%81%9A%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC-object-detection-57ad9772a982
 
 """
 pytorch.ipynb

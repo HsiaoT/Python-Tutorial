@@ -23,7 +23,7 @@ n = 65
 img_name = landmarks_frame.iloc[n,0]
 landmarks = landmarks_frame.iloc[n, 1:]
 landmarks = np.asarray(landmarks)
-landmarks = landmarks.astype("float").reshape(-1,2)
+landmarks = landmarks.astype("float").reshape(-1,2)  # -1: value is inferred from the length of the array and remaining dimension
 
 print('Image name: {}'.format(img_name))              # person-7.jpg
 print('Landmarks shape: {}'.format(landmarks.shape))  # (68, 2)
@@ -51,6 +51,7 @@ show_landmarks(io.imread(os.path.join("/content/faces/", img_name)),
 # ==================================
 from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms, utils
+import torch
 
 # create a custom dataset which inherit Dataset and override below methods:
 # __len__: return the size of the dataset
@@ -59,7 +60,6 @@ from torchvision import transforms, utils
 # read the csv in __init__ but leave the reading of images to __getitem__. 
 # This is memory efficient
 
-import torch
 
 class FaceLandmarksDataset(Dataset):
   def __init__(self, csv_file, root_dir, transform=None):
